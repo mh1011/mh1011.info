@@ -1,0 +1,164 @@
+/* 1. CSS Variables for Theming */
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333333;
+    --heading-color: #222222;
+    --link-color: #1a73e8;
+    --slider-bg: #ccc;
+    --header-bg: #ffffff;
+    --footer-bg: #e9e9e9;
+    --card-bg: #ffffff;
+}
+
+.dark-theme {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --link-color: #8ab4f8;
+    --slider-bg: #4d4d4d;
+    --header-bg: #1c1c1c;
+    --footer-bg: #1c1c1c;
+    --card-bg: #2c2c2c;
+}
+
+/* 2. Base Styles & Centering Layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+}
+
+/* 3. Header Styles with Flexbox for Toggle Alignment */
+header {
+    background-color: var(--header-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* 4. Main Content Area - Centered with Max-Width */
+main {
+    flex: 1 0 auto; /* Pushes footer down */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* 5. Footer Styles */
+footer {
+    background-color: var(--footer-bg);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto; /* Ensures footer sticks to bottom */
+}
+
+/* 6. Typography & Links */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 7. Theme Switch Styles */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--slider-bg);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.theme-label {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* 8. Responsive Design for Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    header nav {
+        gap: 1rem;
+    }
+
+    .theme-switch-wrapper {
+        align-self: center; /* Centers the toggle on mobile */
+    }
+}

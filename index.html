@@ -1,11 +1,29 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Home | mh1011.info</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Home</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/darkmode.js"></script>
 </head>
-
-<!-- This is a comment BTW -->
 <body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pages/blog.html">Blog</a>
+        </nav>
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <span class="theme-label">Dark</span>
+        </div>
+    </header>
+
+    <main>
     <section>
         <h1>Welcome to my WebSite | 2025</h1>
         <p>I bought this domain & hosting space to test web technologies</p>
@@ -30,11 +48,11 @@
             <li>Develop something</li>
         </ul>  
     </section>
+    </main>
 
-    <section>
-        <p>About</p>
-        <p>Last edit: Jun 03, 2022</p>
-    </section>
-    
+    <footer>
+            <a href="pages/about.html">About</a>
+            <a href="pages/contact.html">Contact</a>
+    </footer>
 </body>
-</html> 
+</html>
