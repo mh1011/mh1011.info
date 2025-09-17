@@ -1,7 +1,7 @@
 deployment:
   tasks:
     # This is the most efficient method: use 'rsync' to copy files
-    - /bin/rsync -a --delete . ${{ secrets.SITEDIRECTORY }}
+    - /bin/rsync -a --delete . $DEPLOYMENT_PATH/
 
 
 
