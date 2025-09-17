@@ -1,7 +1,11 @@
+---
 deployment:
   tasks:
-    # This is the most efficient method: use 'rsync' to copy files
-    - /bin/rsync -a --delete . $DEPLOYMENT_PATH/
+    # 1. Remove everything inside the target directory
+    - /bin/rm -rf $DEPLOYMENT_PATH/*
+
+    # 2. Copy all files from the repo to the target directory
+    - /bin/cp -R * $DEPLOYMENT_PATH//
 
 
 
