@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume - Single Page Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Your Resume</h1>
+    </header>
+
+    <nav>
+        <a href="#technical-skills">Technical Skills</a>
+        <a href="#work-experience">Work Experience</a>
+    </nav>
+
+    <section id="technical-skills">
+        <h2>Technical Skills</h2>
+        <p><strong>DevOps:</strong></p>
+        <ul>
+            <li>IaC: Terraform, Pulumi, OpenTofu, AWS CloudFormation</li>
+            <li>CnO: Docker (Compose, Swarm), Kubernetes, Redis, RabbitMQ, Argo CD, Git</li>
+            <li>CI/CD: GitHub Actions, Azure DevOps, Jenkins, GitLab DevOps, Bitbucket Pipelines, AWS CodePipeline, TeamCity, Travis CI, Tekton</li>
+            <li>Observability: Grafana, Prometheus, Dynatrace, Datadog</li>
+        </ul>
+
+        <p><strong>Cloud Technology:</strong></p>
+        <p>Azure:</p>
+        <ul>
+            <li>Virtual machines, AKS, AppGw, Storage, VNet, Web App, NSG</li>
+        </ul>
+        <p>AWS:</p>
+        <ul>
+            <li>Amazon EC2, Lightsail, EBS, RDS, IAM, VPC, ELB, Route 53, ECS, EKS, CloudWatch, Cloud9, CloudTrail, AWS Organizations</li>
+        </ul>
+
+        <p><strong>Server Administration:</strong></p>
+        <p>GNU/Linux:</p>
+        <ul>
+            <li>Red Hat, Ubuntu, Alpine, DNS, NTP, SFTP, SSHFS, Samba, NFS, Bash Scripting, OpenSSL</li>
+        </ul>
+        <p>Windows Server:</p>
+        <ul>
+            <li>AD DS, GPO, WSUS, AD FS, IIS, Kestrel</li>
+        </ul>
+
+        <p><strong>Database:</strong></p>
+        <ul>
+            <li>Apache, Nginx, MongoDB, MariaDB</li>
+        </ul>
+
+        <p><strong>Virtualization & Networking:</strong></p>
+        <ul>
+            <li>KVM/QEMU, Hyper-V, Proxmox/OpenVZ, L2TP/IPsec, Pritunl, OpenVPN</li>
+        </ul>
+    </section>
+
+    <section id="work-experience">
+        <h2>Work Experience</h2>
+
+        <div>
+            <h3>SELISE Digital Platforms | DevOps Engineer</h3>
+            <p>July 2021 - Oct 11, 2023</p>
+            <ul>
+                <li>Maintained, administrated, and helped in deploying microservices in Kubernetes infrastructures on AKS</li>
+                <li>Created & deployed CI/CD pipeline using GitHub Actions</li>
+                <li>Containerized web applications using Docker (.NET Core, Node.js, Java, Angular, React)</li>
+                <li>Integrated Front-End and Back-End codebase to SonarQube for continuous inspection of code quality</li>
+                <li>Administrated GitHub, Bitbucket, local Git server, and also the domain registrar’s DNS for local and production domains</li>
+                <li>Purchased, installed, and maintained SSL certificates for local and production domains (DV, OV, Let's Encrypt)</li>
+                <li>Incorporated and actively monitored Kubernetes clusters, local and remote systems & services using Prometheus, Grafana, Kubernetes dashboard</li>
+                <li>Routinely administrated and maintained both local and remote Linux & Windows servers</li>
+                <li>Provided support for on-premises type 1 and type 2 hypervisors (KVM, Proxmox)</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>DTX Business Solutions | System Administrator</h3>
+            <p>September 2019 - June 2021</p>
+            <ul>
+                <li>Monitored and maintained the integrity of the workstations, network infrastructure, and backend servers & systems</li>
+                <li>Created & administrated AD DS, DNS, GPO, NFS, FTP, WDS, WSUS, and IIS services on Windows Server 2019</li>
+                <li>Provided robust hardware, software & network support to the whole company</li>
+                <li>Optimized the network infrastructure on the Mikrotik RB2011UiAS-RM Router by implementing QoS</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>M/S. Cloudly Solutions | Network Security Engineer</h3>
+            <p>July 2018 - April 2019</p>
+            <ul>
+                <li>Worked as a Technical Attaché and attended meetings in both government & private organizations.</li>
+                <li>Analyzed data and wrote reports on the performance of various wireless devices.</li>
+                <li>Monitored performance (CLI & WebUI) on Enterprise-grade 4G enabled router.</li>
+                <li>Worked with & validated the performance and commercial feasibility of consumer-facing IoT devices.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your

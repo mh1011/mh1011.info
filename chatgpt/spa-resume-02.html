@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume - Single Page Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .theme-selector {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Your Resume</h1>
+    </header>
+
+    <nav>
+        <a href="#technical-skills">Technical Skills</a>
+        <a href="#work-experience">Work Experience</a>
+    </nav>
+
+    <div class="theme-selector">
+        <label for="theme-selector">Select Theme:</label>
+        <select id="theme-selector">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+
+    <section id="technical-skills">
+        <!-- Technical Skills content -->
+    </section>
+
+    <section id="work-experience">
+        <!-- Work Experience content -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+
+    <script>
+        const themeSelector = document.getElementById('theme-selector');
+
+        themeSelector.addEventListener('change', function() {
+            const selectedTheme = themeSelector.value;
+
+            if (selectedTheme === 'dark') {
+                document.body.style.backgroundColor = '#333';
+                document.body.style.color = '#fff';
+            } else {
+                document.body.style.backgroundColor = '#fff';
+                document.body.style.color = '#333';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
