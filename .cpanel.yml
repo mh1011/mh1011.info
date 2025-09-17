@@ -1,2 +1,9 @@
+deployment:
+  tasks:
+    # This is the most efficient method: use 'rsync' to copy files
+    - /bin/rsync -a --delete . ${{ secrets.SITEDIRECTORY }}
+
+
+
 ### Resource: 
 # - https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-deployment/#overview
